@@ -24,6 +24,6 @@ add_executable(chess
     src/shared_move.cpp
 )
 
-target_link_libraries(chess /usr/local/lib64/liblibcppurses.a ncurses)
 target_compile_features(chess PUBLIC cxx_std_14)
 target_compile_options(chess PUBLIC -Wall)
+target_link_libraries(chess cppurses ncursesw pthread)
